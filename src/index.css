@@ -1,10 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-accent: #2563eb;
-  --color-accent-light: #3b82f6;
-  --color-marked: #dcfce7;
-  --color-marked-border: #22c55e;
+  --color-accent: #b57cf6; /* Lavender */
+  --color-accent-light: #e9d8fd; /* Light Lavender */
+  --color-accent-dark: #a78bfa; /* Deeper Lavender */
+  --color-gloss: #f8f7fa; /* Gloss overlay */
+  --color-shadow: #a78bfa; /* Shadow for 3D */
+  --color-marked: #f3e8ff; /* Marked square bg */
+  --color-marked-border: #c4b5fd; /* Marked border */
   --color-bingo: #fbbf24;
 }
 
@@ -14,8 +17,28 @@ body,
   height: 100%;
 }
 
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
   -webkit-tap-highlight-color: transparent;
+}
+
+/* 3D Shiny Lavender Button */
+.lavender-3d-btn {
+  @apply px-6 py-2 rounded-xl font-bold shadow-[0_4px_0_0_var(--color-shadow)] bg-gradient-to-b from-[var(--color-accent-light)] to-[var(--color-accent)] border-2 border-[var(--color-accent-dark)] text-[#4b2994] transition-all duration-200 ease-in-out relative overflow-hidden;
+}
+.lavender-3d-btn::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; right: 0; height: 45%;
+  background: linear-gradient(90deg,rgba(255,255,255,0.5),rgba(255,255,255,0.1));
+  border-radius: inherit;
+  pointer-events: none;
+}
+.lavender-3d-btn:active {
+  @apply shadow-inner scale-95 brightness-105;
+}
+.lavender-3d-btn:focus-visible {
+  @apply ring-2 ring-[var(--color-marked-border)] ring-offset-2;
 }

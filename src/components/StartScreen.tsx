@@ -20,7 +20,7 @@ export function StartScreen({ onStart }: StartScreenProps) {
 
         <button
           onClick={onStart}
-          className="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors"
+          className="lavender-3d-btn w-full text-lg py-4 px-8"
         >
           Start Game
         </button>

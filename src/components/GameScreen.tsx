@@ -23,9 +23,9 @@ export function GameScreen({
       <header className="flex items-center justify-between p-3 bg-white border-b border-gray-200">
         <button
           onClick={onReset}
-          className="text-gray-500 text-sm px-3 py-1.5 rounded active:bg-gray-100"
+          className="lavender-3d-btn text-sm px-3 py-1.5"
         >
-          ← Back
+           Back
         </button>
         <h1 className="font-bold text-gray-900">Soc Ops</h1>
         <div className="w-16"></div>

@@ -12,7 +12,7 @@ export function BingoModal({ onDismiss }: BingoModalProps) {
         
         <button
           onClick={onDismiss}
-          className="w-full bg-accent text-white font-semibold py-3 px-6 rounded-lg active:bg-accent-light transition-colors"
+          className="lavender-3d-btn w-full py-3 px-6"
         >
           Keep Playing
         </button>

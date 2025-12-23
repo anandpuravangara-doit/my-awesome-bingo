@@ -22,13 +22,13 @@ export function BingoSquare({ square, isWinning, onClick }: BingoSquareProps) {
     <button
       onClick={onClick}
       disabled={square.isFreeSpace}
-      className={`${baseClasses} ${stateClasses} ${freeSpaceClasses}`}
+      className={`lavender-3d-btn ${baseClasses} ${stateClasses} ${freeSpaceClasses}`}
       aria-pressed={square.isMarked}
       aria-label={square.isFreeSpace ? 'Free space' : square.text}
     >
       <span className="wrap-break-word hyphens-auto">{square.text}</span>
       {square.isMarked && !square.isFreeSpace && (
-        <span className="absolute top-0.5 right-0.5 text-green-600 text-xs">✓</span>
+        <span className="absolute top-0.5 right-0.5 text-green-600 text-xs"></span>
       )}
     </button>
   );
